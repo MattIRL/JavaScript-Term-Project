@@ -1,0 +1,54 @@
+body {
+    background-image: url('../media/RoadBG.jpg');
+    background-repeat: no-repeat;
+    background-size: 1200px, auto;
+    background-color: black;
+}
+
+#container {
+    width: 250px;
+    height: 180px;
+    position: relative;
+}
+
+#car {
+    width: 200px;
+    height: 89px;
+    position: relative;
+    background-color: none;
+}
+
+p {
+    color: white;
+}
+
+input {
+    text-align: center;
+}
+
+#coords {
+    position: absolute;
+    left: 1300px;
+    top: 25px;
+}
+
+#controls {
+    background-color: white;
+    opacity: 0.8;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    height: 125px;
+    width: 1180px
+}
+
+section {
+    width: 700px;
+    height: 525px;
+}
+
+button {
+    width: 200px;
+    padding: 10px;
+    color: white;
+    background-color: darkslategrey;
+}

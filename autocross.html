@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        canvas {
+            border: 1px solid #d3d3d3;
+        }
+
+        body {
+            background-color: #222222;
+            color: whitesmoke;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        p {
+            color: #222222;
+        }
+    </style>
+</head>
+
+<body onload="startGame()">
+    <h1>Keep the Car Between the Cones</h1>
+    <script src="js/autocross.js">      
+    </script>
+    <div style="text-align:center;width:680px;background-color:whitesmoke; padding: 1%;">
+        <p id="instructions">Use your keyboard arrow keys to drive the car.</p>
+        <p id="highScore"></p>
+        <button onClick="window.location.reload()">RESET</button>
+    </div>
+
+</body>
+
+</html>

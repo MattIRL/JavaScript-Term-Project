@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="css/project.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="media/wheelIcon.png">
+    <title>Automotive Games by Matt</title>
+
+</head>
+<!-- 
+  These games are designed for automotive enthusiasts. 
+  The design of the website appeals to fans of '80s and '90s car culture and retro gaming
+  The colors selected for items and text are derived from the dashboard of the interactive image. 
+  #53b2b5 color is used in the gauge cluster and on some of the radio controls, while #a2150c can be found on the gauge needles and climate control buttons.
+  These colors not only pull from details within the interactive image, but also represent popular colors from the '80s and '90s.
+-->
+
+<body>
+    <div class="button-container" style="padding: 1%;">
+        <button id="match">Match the Brand</button>
+        <button id="autocross">Autocross</button>
+        <button id="trivia">Automotive Trivia</button>
+        <button id="readMe">Read Me</button>
+    </div>
+    <div class="image-container">
+        <!-- Original image with map -->
+        <img src="media/dashboard.jpg" alt="Dashboard" width="100%" height="auto">
+
+        <!-- SVG highlights container with linking -->
+        <svg class="area-highlights" width="100%" height="100%"  viewBox="0 0 1200 800">
+            <path class="highlight" id="wheel"
+                d="M.74,213.24c-.74,153.22,0,.96-.74,153.22,6.33,12.82,32.95,66.71,84.1,79.52,90.5,19.7,166.84-52.56,188.93-145.93,27.17-101.3-13.36-200.19-90.53-220.89C106.83,55.45,21.43,133.58.74,213.24Z">
+            </path>
+            <path class="highlight" id="brand" d="M840, 220 L1150, 220 L1150, 295 L840, 295 L840, 220 Z"></path>
+            <path class="highlight" id="shifter"
+                d="M320,450 L330,430 L350,420 L370,420 L550,615 L450,710 L330,660 L320,450 Z"></path>
+            <path class="highlight" id="auto" d="M840, 295 L1150, 295 L1150, 365 L840, 365 L840, 295 Z"></path>
+            <path class="highlight" id="radio" d="M490,450 L505,255 L760,305 L730,510 L490,450 Z"></path>
+            <path class="highlight" id="autoTrivia" d="M840,365 L1150, 365 L1150, 440 L840, 440 L840, 365 Z"></path>
+        </svg>
+    </div>
+
+    <script src="js/project.js">
+    </script>
+</body>
+
+</html>
