@@ -1,11 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charste="UTF-8">
     <title>Match the Brand</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/brandMatch.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <h1>Match the Brand game</h1>
-    <p>The player has to match automotive brand logos to their company name. Ages 5 and up. (The 5 year old will need to be a huge automotive enthusiast)</p>
+    <section class="button-container" style="padding: 1%;">
+        <button id="home">Home</button>
+        <button id="autocross">Autocross</button>
+        <button id="trivia">Automotive Trivia</button>
+        <button id="readMe">Read Me</button>
+    </section>
+    <div class="score"><span>Score:&nbsp</span><span id="correct"></span><span>/</span><span id="total"></span><span>&nbsp;</span><button id="reset">Reset</button></div>
+
+    <section class="draggable-elements"></section>
+    <section class="droppable-elements"></section>
+    <script src="js/brandMatch.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #222222;
+    color: #53b2b5;
+}
+.score {
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    margin-bottom: 1%
+}
+button {
+    background-color: #53b2b5;
+    color: white;
+    border: none;
+    padding: 0.5% 1%;
+    text-align: center;
+    font-size: clamp(16px, 3vw, 24px);
+    cursor: pointer;
+    border-radius: 3px;
+}
+button:hover{
+    background-color:#a2150c;
+    transition: 0.3s ease-in-out;
+}
+.button-container {
+    top: .5%;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+.draggable-elements {
+    display: flex;
+    justify-content: center;
+}
+.draggable {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2%;
+    cursor: move;
+    transition: opacity 0.2s;
+}
+.draggable:hover {
+    opacity: 0.5;
+}
+.droppable {
+    height: 100px;
+    width: 100px;
+    margin: 1% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #53b2b5;
+    color: #222222;
+    border: 5px double #222222;
+    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+.droppable span {
+    font-size: 15px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+.droppable.droppable-hover {
+    border-width: 5px;
+    transform: scale(1.1);
+}
+
+.droppable.dropped {
+    border: 1px solid #53b2b5;
+    color: whitesmoke;
+    font-size: 15px;
+}
+.droppable.dropped span {
+    font-size: 15px;
+    margin-top: 1%;
+}
+.draggable.dragged {
+    user-select: none;
+    opacity: 0.1;
+    cursor: default;
+}
+.draggable.dragged:hover {
+    opacity: 0.1;
+}
+
+@media (max-width:800px) {
+    .draggable-elements {margin: 2px;}
+    .droppable {
+        height: 85px; 
+        width: 85px; 
+        margin: 10px auto; 
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border: 2px double #222222;
+    }
+    .droppable span {
+        font-size: 13px;
+        font-weight:700;
+    }
+    .draggable {
+        height: 85px;
+        width:85px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1%;
+        cursor: move;
+        transition: opacity 0.2s;
+    }
+    .droppable.dropped span {
+        font-size: 11px;
+        margin-top: 1px;
+    }
+
+
+}

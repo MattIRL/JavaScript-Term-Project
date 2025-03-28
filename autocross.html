@@ -3,24 +3,19 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-        canvas {
-            border: 1px solid #d3d3d3;
-        }
-
-        body {
-            background-color: #222222;
-            color: whitesmoke;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-        }
-        p {
-            color: #222222;
-        }
-    </style>
+    <link href="css/autocross.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body onload="startGame()">
+    <section class="button-container" style="padding: 1%;">
+        <button id="home">Home</button>
+        <button id="brandMatch">Brand Match</button>
+        <button id="trivia">Automotive Trivia</button>
+        <button id="readMe">Read Me</button>
+    </section>
     <h1>Keep the Car Between the Cones</h1>
+
+    <div id="gameContainer"></div>
     <script src="js/autocross.js">      
     </script>
     <div style="text-align:center;width:680px;background-color:whitesmoke; padding: 1%;">

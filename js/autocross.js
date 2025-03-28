@@ -6,6 +6,12 @@ var myLevel;
 var score = 0;
 var levelChanged = false;
 
+// Event listeners for buttons
+document.getElementById("home").addEventListener('click', () => window.location.href = "Games.html");
+document.getElementById("brandMatch").addEventListener('click', () => window.location.href = "brandMatch.html");
+document.getElementById("trivia").addEventListener('click', () => window.location.href = "trivia.html");
+document.getElementById("readMe").addEventListener('click', () => window.location.href = "readme.txt");
+
 function startGame() {
     myGamePiece = new component(100, 45, "media/car.png", 10, 190, "image");
     myScore = new component("30px", "Impact", "whitesmoke", 560, 80, "text");
@@ -26,7 +32,7 @@ var myGameArea = {
         this.canvas.width = 960;
         this.canvas.height = 540;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.getElementById("gameContainer").appendChild(this.canvas);
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 10);
 
@@ -46,7 +52,7 @@ var myGameArea = {
     // collision DISQUALIFIED function
     stop: function () {
         clearInterval(this.interval);
-        document.getElementById("instructions").innerHTML = "<em style = 'color: red'>DISQUALIFIED!";
+        document.getElementById("instructions").innerHTML = "<em style = 'color: #a2150c'>DISQUALIFIED!";
 
 
     }
@@ -124,7 +130,7 @@ function updateGameArea() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
     score++;
-
+    // Makes road position update and loop with game speed
     for (i = 0; i < myBackgrounds.length; i += 1) {
         myBackgrounds[i].x += -1;
         if (myBackgrounds[i].x <= -myBackgrounds[i].width){
@@ -141,6 +147,8 @@ function updateGameArea() {
         minGap = 150;
         maxGap = 240;
         gap = Math.floor(Math.random() * (maxGap - minGap + 1) + minGap);
+
+        // Create objects on the road
         var topObstacle = new component(2, height, "rgba(0, 0, 0, 0)", x, 0, "color", true);
         myObstacles.push(topObstacle);
         var bottomObstacle = new component(2, x - height - gap, "rgba(0, 0, 0, 0)", x, height + gap, "color", true);
