@@ -100,7 +100,7 @@ $(document).ready(function () {
       brandName: "Maybach"
     },
     {
-      imgName: "mercedesbenz",
+      imgName: "mercedesBenz",
       brandName: "Mercedes-Benz"
     },
     {
