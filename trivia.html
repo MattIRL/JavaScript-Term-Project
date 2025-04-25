@@ -2,10 +2,44 @@
 <html>
 
 <head>
+    <meta charste="UTF-8">
     <title>Automotive Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="media/wheelIcon.png">
+    <link href="css/trivia.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
-    <h1>Automotive Trivia game.</h1>
-    <p>The player answers multiple-choice automotive themed trivia questions. Ages 13 and up.</p>
+    <section class="button-container" style="padding: 1%;">
+        <button id="home">Home</button>
+        <button id="autocross">Autocross</button>
+        <button id="brandMatch">Brand Match</button>
+        <button id="readMe">Read Me</button>
+    </section>
+    <section class="center">
+        <h1 id="header">Automotive Trivia Game</h1>
+        <button onClick="window.location.reload()" id="restart" style="visibility: hidden; ">Play Again</button>
+        <div id="formSection">
+            <span>Question </span><span id="number">1</span><span> of 5</span><br><br>
+            <form>
+                <div id="question-display"></div><br>
+                <input type="radio" id="answer-true" name="radio"><label> True</label><br>
+                <input type="radio" id="answer-false" name="radio"><label> False</label>
+            </form>
+            <div><br>
+                <div id="note-display"></div>
+                <br><br>
+                <button id="submit-answer">Submit Answer</button>
+                <button id="next-question">Next Question</button><br><br>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+
+
+    </section>
+
+
+    <script src="js/trivia.js"></script>
 </body>
+
 </html>
