@@ -7,8 +7,12 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #222222;
+    background-image: url(../media/dashboard8bit.jpg);
     color: #53b2b5;
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-color: #222222;
+    background-position-x: center;
 }
 
 h1 {
@@ -41,8 +45,11 @@ button:hover {
     margin: auto;
     width: 50%;
     border: 3px solid #a2150c;
+    box-shadow: 10px 10px 5px black;
     border-radius: 5px;
     padding: 10px;
+    background-color: #222222;
+    padding: 2%;
 }
 
 
